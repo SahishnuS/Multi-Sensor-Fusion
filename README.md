@@ -57,7 +57,6 @@ The filter carries a 15-element error state: position (3), velocity (3), attitud
 ├── es_ekf_auv.py              # Full ES-EKF implementation: quaternion math,
 │                               #   mission/sensor simulation, filter, driver
 ├── generate_plots.py           # Generates the full plot suite from saved output
-├── AUV_Sensor_Fusion_Report.md # Full write-up (design rationale, results, discussion)
 └── plots/                      # 12-plot visualization suite (generated)
     ├── 01_trajectory_2d.png
     ├── 02_trajectory_3d.png
