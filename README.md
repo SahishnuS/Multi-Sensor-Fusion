@@ -57,7 +57,7 @@ The filter carries a 15-element error state: position (3), velocity (3), attitud
 ├── es_ekf_auv.py              # Full ES-EKF implementation: quaternion math,
 │                               #   mission/sensor simulation, filter, driver
 ├── generate_plots.py           # Generates the full plot suite from saved output
-└── plots/                      # 12-plot visualization suite (generated)
+└── plots/                      # 8-plot visualization suite (generated)
     ├── 01_trajectory_2d.png
     ├── 02_trajectory_3d.png
     ├── 03_position_est_vs_truth.png
@@ -66,10 +66,6 @@ The filter carries a 15-element error state: position (3), velocity (3), attitud
     ├── 06_position_error.png
     ├── 07_velocity_error.png
     ├── 08_orientation_error.png
-    ├── 09_rmse_over_time.png
-    ├── 10_innovation_residuals.png
-    ├── 11_covariance_evolution.png
-    └── 12_bias_convergence.png
 ```
 
 `es_ekf_auv.py` is organized into six modules: quaternion utilities, a `SensorConfig` dataclass (every noise/bias/rate/dropout parameter in one place), a 600 s lawnmower-survey ground-truth generator, a sensor simulator, the `ESEKF` class (`predict()` + one `update_*()` per sensor), and a simulation driver (`run_filter`).
@@ -104,7 +100,7 @@ Generate the plot suite from the saved output:
 python3 generate_plots.py
 ```
 
-This reads `sim_output.npz` / `sim_extra.pkl` and writes all 12 plots to `plots/`.
+This reads `sim_output.npz` / `sim_extra.pkl` and writes all 8 plots to `plots/`.
 
 ## Using Your Own Sensor Data
 
